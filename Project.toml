@@ -1,4 +1,4 @@
 name = "asciiart"
 uuid = "dc0bdcec-7361-425a-9510-c353f944e339"
 authors = ["likewu <likewu@126.com>"]
-version = "0.1.0"
+version = "0.1.1"
