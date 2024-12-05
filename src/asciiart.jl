@@ -1,4 +1,10 @@
-module asciiart
+#module asciiart
+
+using Plots
+pyplot()
+rcParams = Plots.PyCall.PyDict(Plots.PyPlot.matplotlib."rcParams")
+rcParams["font.sans-serif"] = ["SimHei"]
+rcParams["axes.unicode_minus"] = false
 
 export print4
 
@@ -260,6 +266,13 @@ V  \
 	end
 
   printstyled(msg,bold=false,color=color)
+
+
+  f(t) = t<=5 ? 0 : π;
+  t=[1,2,3,4,5,6,7,8,9,10]
+
+  t=[1,2,3,4,4.99,5.01,6,7,8,9,10]
+  plot(t,f.(t)     ;xlabel="t - 时间",ylabel="v - 速度", fg=color)
 end
 
-end # module
+#end # module
