@@ -1,6 +1,7 @@
 #module asciiart
 
 using Plots
+using Plots.PlotMeasures
 pyplot()
 rcParams = Plots.PyCall.PyDict(Plots.PyPlot.matplotlib."rcParams")
 rcParams["font.sans-serif"] = ["SimHei"]
@@ -272,7 +273,7 @@ V  \
   t=[1,2,3,4,5,6,7,8,9,10]
 
   t=[1,2,3,4,4.99,5.01,6,7,8,9,10]
-  plot(t,f.(t)     ;xlabel="t - 时间",ylabel="v - 速度", fg=color)
+  plot(t,f.(t)     ;xlabel="t - 时间",ylabel="v - 速度", fg=color, size=(800,600), margin=20px, tickfontsize=11, guidefontsize=16)
 end
 
 #end # module
